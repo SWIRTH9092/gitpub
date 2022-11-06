@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>At foo bar</h1>
+    <h2><%=oneDrink.name[0].toUpperCase() + oneDrink.name.substring(1)%> </h2>
+    <img class="bigimage" src="<%=oneDrink.image %>" />
+    <h3> <%=' $' + oneDrink.price%></h3>
+    <a class="drinklistlink" href="/drinks/">Return to List of All Drinks</a>
+ </body>
+</html>

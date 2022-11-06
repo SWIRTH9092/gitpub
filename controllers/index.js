@@ -15,9 +15,14 @@ router.get('/drinks', (request,response) => {
 })
 
 router.get('/drinks/:id', (request,response) => {
-    response.render('drinks_index.ejs', { drinks })   
+    let oneDrink = drinks [request.params.id]
+    response.render('drinks_show.ejs', { oneDrink } )   
 })
 
+router.get("/fruits/:indexOfFruitsArray", (req, res) => {
+
+    res.send(fruits[req.params.indexOfFruitsArray]);
+ });
 
 module.exports = router; //<---- making this router exportable
 

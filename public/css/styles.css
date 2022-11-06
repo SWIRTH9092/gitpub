@@ -3,16 +3,30 @@
     text-align: center;
 }
 
+ul li {
+    padding: 1rem 0 1rem 0;
+}
 ul li a {
     font-size: 2rem;
-    padding: 1rem 0 1rem 0;
     text-decoration: none;
+    color: black;
 }
 
 li {
     list-style: none;
+
 }
 
 img {
     max-height: 100px;
+}
+
+.bigimage {
+    max-height: 350px;
+}
+
+.drinklistlink {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
 }
