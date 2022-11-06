@@ -14,6 +14,10 @@ router.get('/drinks', (request,response) => {
    response.render('drinks_index.ejs', { drinks })
 })
 
+router.get('/drinks/:id', (request,response) => {
+  console.log("whatever drink", request.params.id)     
+})
+
 
 module.exports = router; //<---- making this router exportable
 
