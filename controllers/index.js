@@ -10,6 +10,11 @@ router.get('/', (request,response) => {
     response.send("Welcome to the gitpub App!")
 })
 
+router.get('/drinks', (request,response) => {
+   response.render('drinks_index.ejs', { drinks })
+})
+
+
 module.exports = router; //<---- making this router exportable
 
 
