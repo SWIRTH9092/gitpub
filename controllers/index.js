@@ -1,0 +1,15 @@
+const express = require('express');      //get the express package
+const drinks = require('../models/drinks'); //<--get our drinks array
+// const food = require('../models/food');     //<==get our foods array
+const router = express.Router(); //<-- we CANOT do const app = express() because 
+//we did that in server.js. Therefore we must do const router = express.Router()
+//and replace all the app.get to router.get
+
+//route 1
+router.get('/', (request,response) => {
+    response.send("Welcome to the gitpub App!")
+})
+
+module.exports = router; //<---- making this router exportable
+
+

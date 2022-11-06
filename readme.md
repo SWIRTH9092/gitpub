@@ -10,7 +10,7 @@ App for the resturant GitPub
 - EJS
 - gitignore
 - .env
-
+- MVC file structure
 
 #### Link to Project
 
