@@ -15,7 +15,7 @@ router.get('/drinks', (request,response) => {
 })
 
 router.get('/drinks/:id', (request,response) => {
-  console.log("whatever drink", request.params.id)     
+    response.render('drinks_index.ejs', { drinks })   
 })
 
 

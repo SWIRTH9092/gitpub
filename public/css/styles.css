@@ -3,9 +3,10 @@
     text-align: center;
 }
 
-ul li {
+ul li a {
     font-size: 2rem;
     padding: 1rem 0 1rem 0;
+    text-decoration: none;
 }
 
 li {

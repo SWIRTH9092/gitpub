@@ -10,11 +10,13 @@
 <body>
     <h1>Welcome to gitPub</h1>
     <ul>
-        <% drinks.forEach(v=>{ %> 
+        <% drinks.forEach((v, index) =>{ %> 
             <li>
+            <a href="/drinks/<%=index%>">
                 
                 <%=v.name[0].toUpperCase() + v.name.substring(1) + ' $' + v.price %> <br>
                 <img src="<%=v.image %>" />
+            </a>
             </li>
         <% }) %>    
     </ul>
