@@ -7,21 +7,33 @@ const router = express.Router(); //<-- we CANOT do const app = express() because
 
 //route 1
 router.get('/', (request,response) => {
-    response.send("Welcome to the gitpub App!")
+    response.send(`
+    <head>
+        <link href="/css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1 style="margin-top: 100px;">
+         Welcome to the gitpub App!
+    </h1>
+    <a href="./drinks">Drink and Food Menu</a>
+    <p></p>
+    <img class="mainimg" src="https://media.blogto.com/articles/20150123-whelansgate2048-10.jpg?cmd=resize_then_crop&quality=70&w=2048&height=1365">
+    </body>
+    `)
 })
+ 
+
 
 router.get('/drinks', (request,response) => {
-   console.log("food", food)
-    let drinksFood = []
+   let drinksFood = []
    drinks.forEach((element,index) => {
     drinksFood.push({name: element.name, price: element.price, image: element.image, type: "drinks", arrIdx: index})
    })
    food.forEach((element,index) => {
     drinksFood.push({name: element.name, price: element.price, image: element.image, type: "food", arrIdx: index})
    })
+   response.render('drinks_index.ejs', { drinksFood } )
 
-   console.log("drinksFood", drinksFood)
-   response.render('drinks_index.ejs', { drinksFood })
 })
 
 router.get('/drinks/:id', (request,response) => {
