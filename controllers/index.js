@@ -28,7 +28,9 @@ router.get('/drinks/:id', (request,response) => {
     let oneDrink = drinks [request.params.id]
     response.render('drinks_show.ejs', { oneDrink } )   
 })
-
+  
+router.get('/food/:id', (request,response) => {
+    let oneFood = food [request.params.id]
+    response.render('food_show.ejs', { oneFood } )   
+})
 module.exports = router; //<---- making this router exportable
-
-
