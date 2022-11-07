@@ -1,5 +1,5 @@
 const express = require('express');      //get the express package
-const drinks = require('../models/drinks'); //<--get our drinks array
+let drinks = require('../models/drinks'); //<--get our drinks array
 const food = require('../models/food');     //<==get our foods array
 const router = express.Router(); //<-- we CANOT do const app = express() because 
 //we did that in server.js. Therefore we must do const router = express.Router()
@@ -11,7 +11,17 @@ router.get('/', (request,response) => {
 })
 
 router.get('/drinks', (request,response) => {
-   response.render('drinks_index.ejs', { drinks, food })
+   console.log("food", food)
+    let drinksFood = []
+   drinks.forEach((element,index) => {
+    drinksFood.push({name: element.name, price: element.price, image: element.image, type: "drinks", arrIdx: index})
+   })
+   food.forEach((element,index) => {
+    drinksFood.push({name: element.name, price: element.price, image: element.image, type: "food", arrIdx: index})
+   })
+
+   console.log("drinksFood", drinksFood)
+   response.render('drinks_index.ejs', { drinksFood })
 })
 
 router.get('/drinks/:id', (request,response) => {

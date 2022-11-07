@@ -9,15 +9,17 @@
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
+    <h2>Drinks and Food</h2>
     <ul>
-        <% drinks.forEach((v, index) =>{ %> 
+        <% drinksFood.forEach((v, index) =>{ %> 
             <li>
-                <a href="/drinks/<%=index%>">
+                <a href="/<%=v.type%>/<%=v.arrIdx%>">
                      <%=v.name[0].toUpperCase() + v.name.substring(1)%> <br>
                     <img src="<%=v.image %>" />
                 </a>
             </li>
         <% }) %>    
     </ul>
+    <p></p>
 </body>
 </html>
